@@ -26,7 +26,7 @@ window.onload = ()=>{
   })
 }
 
-interact('.draggable')
+interact('.yanxia')
   .draggable({
     snap: {
       targets: [
