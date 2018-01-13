@@ -1,3 +1,74 @@
+#erle {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+
+  border-radius: 0.75em 0 0 0.75em;
+
+  opacity: 0.7;
+  background: url('./Erle.jpg');
+  background-size: contain;
+}
+
+#orcus {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+
+  border-radius: 0.75em 0 0 0.75em;
+
+  opacity: 0.7;
+  background: url('./Orcus.jpg');
+  background-size: contain;
+}
+
+#vochstein {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+
+  border-radius: 0.75em 0 0 0.75em;
+
+  opacity: 0.7;
+  background: url('./Vochstein.jpg');
+  background-size: contain;
+}
+
+#aqrabuamelu {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+
+  border-radius: 0.75em 0 0 0.75em;
+
+  opacity: 0.7;
+  background: url('./Aqrabuamelu.jpg');
+  background-size: contain;
+}
+
+#mahisha {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+
+  border-radius: 0.75em 0 0 0.75em;
+
+  opacity: 0.7;
+  background: url('./Mahisha.jpg');
+  background-size: contain;
+}
+
+#luminare {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+
+  border-radius: 0.75em 0 0 0.75em;
+
+  opacity: 0.7;
+  background: url('./Luminare.jpg');
+  background-size: contain;
+}
 
 #gajasura {
   width: 50px;
@@ -23,30 +94,92 @@
   background-size: contain;
 }
 
-/* #drag-2 {
-  width: 10px;
-  height: 10px;
-  margin: 10%;
+#oni {
+  width: 50px;
+  height: 50px;
+  margin: 0;
 
-  background-color: #29e;
-  color: white;
-  opacity: 0.5;
+  border-radius: 0.75em 0 0 0.75em;
 
-  border-radius: 0.75em;
-  padding: 4%;
+  opacity: 0.7;
+  background: url('./Oni-Yumemi.jpg');
+  background-size: contain;
+}
 
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-} */
+#funa {
+  width: 50px;
+  height: 50px;
+  margin: 0;
 
-#yanxia {
+  border-radius: 0.75em 0 0 0.75em;
+
+  opacity: 0.7;
+  background: url('./Funa-Yurei.jpg');
+  background-size: contain;
+}
+
+#girimekhala {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+
+  border-radius: 0.75em 0 0 0.75em;
+
+  opacity: 0.7;
+  background: url('./Girimekhala.jpg');
+  background-size: contain;
+}
+
+#sum {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+
+  border-radius: 0.75em 0 0 0.75em;
+
+  opacity: 0.7;
+  background: url('./Sum.jpg');
+  background-size: contain;
+}
+
+#fringes {
+  width: 500px;
+  height: 500px;
+
+  background: url('./The-Fringes-Hunt-Maps.jpg');
+  background-size: contain;
+}
+#peaks {
+  width: 500px;
+  height: 500px;
+
+  background: url('./The-Peaks-Hunt-Maps.jpg');
+  background-size: contain;
+}#lochs {
+  width: 500px;
+  height: 500px;
+
+  background: url('./The-Lochs-Hunt-Maps.jpg');
+  background-size: contain;
+}#yanxia {
   width: 500px;
   height: 500px;
 
   background: url('./Yanxia-Hunt-Maps.jpg');
   background-size: contain;
-}
+}#ruby {
+  width: 500px;
+  height: 500px;
 
+  background: url('./The-Ruby-Sea-Hunt-Maps.jpg');
+  background-size: contain;
+}#azim {
+  width: 500px;
+  height: 500px;
+
+  background: url('./The-Azim-Steppe-Hunt-Maps.jpg');
+  background-size: contain;
+}
 #drag-me::before {
   content: "#" attr(id);
   font-weight: bold;
