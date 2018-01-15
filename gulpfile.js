@@ -18,7 +18,7 @@ gulp.task('server', function () {
 })
 
 gulp.task('copyIndex', function () {
-  return gulp.src('./index.html')
+  return gulp.src(['./index.html','app.js'])
     .pipe(gulp.dest('./dist/'));
 });
 
