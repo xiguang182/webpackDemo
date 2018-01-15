@@ -34,6 +34,15 @@ window.onload = ()=>{
       range: snapRange
     }
   })
+
+  element = window.document.getElementById('lochs');
+  locations['lochs'] = locationModel.lochsLocation.map( loc =>{
+    return {
+      x: element.offsetLeft + loc.x,
+      y: element.offsetTop + loc.y,
+      range: snapRange
+    }
+  })
 }
 
 interact('.yanxia')
@@ -126,6 +135,45 @@ interact('.yanxia')
     }
   });
 
+  interact('.lochs')
+  .draggable({
+    snap: {
+      targets: [
+        function (x, y) {
+          return locations.lochs.reduce((acc, cur) =>{
+            let distance1 = Math.pow((x-acc.x),2) + Math.pow((y-acc.y),2);
+            let distance2 = Math.pow((x-cur.x),2) + Math.pow((y-cur.y),2);
+            if(distance1 > distance2){
+              acc = cur;
+            }
+            return acc;
+          })
+      },],
+      relativePoints: [
+        { x: 1  , y: 0   },   // snap relative to the element's top-left,
+        // { x: 0.5, y: 0.5 },   // to the center
+        { x: 0  , y: 1   }    // and to the bottom-right
+      ],
+      endOnly: true,
+    },
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    restrict: {
+      restriction: "parent",
+      endOnly: true,
+      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+    },
+    // enable autoScroll
+    autoScroll: true,
+
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: (event) =>{
+    }
+  });
+
   function dragMoveListener (event) {
     var target = event.target,
         // keep the dragged position in the data-x/data-y attributes
@@ -144,18 +192,3 @@ interact('.yanxia')
 
   // this is used later in the resizing and gesture demos
   window.dragMoveListener = dragMoveListener;
-
-// function component() {
-//   var element = document.createElement('div');
-
-//   // Lodash, now imported by this script
-//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-//   element.classList.add('hello');
-
-//   // Add the image to our existing div.
-//   var myIcon = new Image();
-//   util();
-//   return element;
-// }
-
-// document.body.appendChild(component());
