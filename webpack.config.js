@@ -8,7 +8,7 @@ module.exports = {
     app:'./src/index.js'
   },
   plugins: [
-    new CleanWebpackPlugin(['dist/app.bundle.js', 'dist/*.jpg']),
+    new CleanWebpackPlugin(['dist/*.*']),
     // new HtmlWebpackPlugin({
     //   title: 'Output Management'
     // })

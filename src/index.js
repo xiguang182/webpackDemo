@@ -60,9 +60,7 @@ interact('.yanxia')
           })
       },],
       relativePoints: [
-        { x: 1  , y: 0   },   // snap relative to the element's top-left,
-        // { x: 0.5, y: 0.5 },   // to the center
-        { x: 1  , y: 1   }    // and to the bottom-right
+        { x: 0.5  , y: 1.2}    // and to the bottom-mid
       ],
       endOnly: true,
     },
@@ -111,9 +109,7 @@ interact('.yanxia')
           })
       },],
       relativePoints: [
-        { x: 1  , y: 0   },   // snap relative to the element's top-left,
-        // { x: 0.5, y: 0.5 },   // to the center
-        { x: 1  , y: 1   }    // and to the bottom-right
+        { x: 0.5  , y: 1.2   }    // and to the bottom-mid
       ],
       endOnly: true,
     },
@@ -150,8 +146,7 @@ interact('.yanxia')
           })
       },],
       relativePoints: [
-        { x: 0  , y: 0   }, 
-        { x: 1  , y: 0   }  
+        { x: 0.5  , y: 1.2   }    // and to the bottom-mid
       ],
       endOnly: true,
     },

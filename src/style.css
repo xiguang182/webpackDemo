@@ -1,143 +1,80 @@
 #erle {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
-  opacity: 0.7;
   background: url('./Erle.jpg');
   background-size: contain;
 }
-
-#orcus {
+.marker {
   width: 50px;
   height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
+  
+  border: 1px solid #003ee9;
+  border-radius: 50%;
   opacity: 0.7;
+}
+
+.marker::after{
+  content: "";
+  width: 0px;
+  height: 0px;
+  bottom: -18px;
+  left: 15px;
+  
+  position: absolute;
+  border: 10px solid transparent;
+  border-top: 10px solid #003ee9;
+}
+
+
+#orcus {
   background: url('./Orcus.jpg');
   background-size: contain;
 }
 
 #vochstein {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
-  opacity: 0.7;
   background: url('./Vochstein.jpg');
   background-size: contain;
 }
 
 #aqrabuamelu {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
-  opacity: 0.7;
   background: url('./Aqrabuamelu.jpg');
   background-size: contain;
 }
 
 #mahisha {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0 0 0.75em 0.75em;
-
-  opacity: 0.7;
   background: url('./Mahisha.jpg');
   background-size: contain;
 }
 
 #luminare {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0 0 0.75em 0.75em;
-
-  opacity: 0.7;
   background: url('./Luminare.jpg');
   background-size: contain;
 }
 
 #gajasura {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
-  opacity: 0.7;
   background: url('./Gajasura.jpg');
   background-size: contain;
 }
 
 #angada {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
-  opacity: 0.7;
   background: url('./Angada.jpg');
   background-size: contain;
 }
 
 #oni {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
-  opacity: 0.7;
   background: url('./Oni-Yumemi.jpg');
   background-size: contain;
 }
 
 #funa {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
-  opacity: 0.7;
   background: url('./Funa-Yurei.jpg');
   background-size: contain;
 }
 
 #girimekhala {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
-  opacity: 0.7;
   background: url('./Girimekhala.jpg');
   background-size: contain;
 }
 
 #sum {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-
-  border-radius: 0.75em 0 0 0.75em;
-
-  opacity: 0.7;
   background: url('./Sum.jpg');
   background-size: contain;
 }
