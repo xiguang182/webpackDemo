@@ -51,7 +51,7 @@
   height: 50px;
   margin: 0;
 
-  border-radius: 0.75em 0 0.75em 0;
+  border-radius: 0 0 0.75em 0.75em;
 
   opacity: 0.7;
   background: url('./Mahisha.jpg');
@@ -63,7 +63,7 @@
   height: 50px;
   margin: 0;
 
-  border-radius: 0.75em 0 0.75em 0;
+  border-radius: 0 0 0.75em 0.75em;
 
   opacity: 0.7;
   background: url('./Luminare.jpg');
