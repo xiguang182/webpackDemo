@@ -43,6 +43,33 @@ window.onload = ()=>{
       range: snapRange
     }
   })
+
+  element = window.document.getElementById('peaks');
+  locations['peaks'] = locationModel.peaksLocation.map( loc =>{
+    return {
+      x: element.offsetLeft + loc.x,
+      y: element.offsetTop + loc.y,
+      range: snapRange
+    }
+  })
+
+  element = window.document.getElementById('rubySea');
+  locations['rubySea'] = locationModel.rubySeaLocation.map( loc =>{
+    return {
+      x: element.offsetLeft + loc.x,
+      y: element.offsetTop + loc.y,
+      range: snapRange
+    }
+  })
+
+  element = window.document.getElementById('azim');
+  locations['azim'] = locationModel.azimLocation.map( loc =>{
+    return {
+      x: element.offsetLeft + loc.x,
+      y: element.offsetTop + loc.y,
+      range: snapRange
+    }
+  })
 }
 
 interact('.yanxia')
@@ -79,18 +106,6 @@ interact('.yanxia')
     onmove: dragMoveListener,
     // call this function on every dragend event
     onend: (event) =>{
-      // console.log(locations)
-      // console.log(event.target.getAttribute('data-x'), event.target.getAttribute('data-y'))
-      // console.log(event)
-      // let element = window.document.getElementById('map');
-      // console.log(element.offsetLeft, element.offsetTop, element.offsetParent);
-      // var textEl = event.target.querySelector('p');
-
-      // textEl && (textEl.textContent =
-      //   'moved a distance of '
-      //   + (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
-      //                Math.pow(event.pageY - event.y0, 2) | 0))
-      //       .toFixed(2) + 'px');
     }
   });
 
@@ -137,6 +152,117 @@ interact('.yanxia')
       targets: [
         function (x, y) {
           return locations.lochs.reduce((acc, cur) =>{
+            let distance1 = Math.pow((x-acc.x),2) + Math.pow((y-acc.y),2);
+            let distance2 = Math.pow((x-cur.x),2) + Math.pow((y-cur.y),2);
+            if(distance1 > distance2){
+              acc = cur;
+            }
+            return acc;
+          })
+      },],
+      relativePoints: [
+        { x: 0.5  , y: 1.2   }    // and to the bottom-mid
+      ],
+      endOnly: true,
+    },
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    restrict: {
+      restriction: "parent",
+      endOnly: true,
+      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+    },
+    // enable autoScroll
+    autoScroll: true,
+
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: (event) =>{
+    }
+  });
+
+  interact('.peaks')
+  .draggable({
+    snap: {
+      targets: [
+        function (x, y) {
+          return locations.peaks.reduce((acc, cur) =>{
+            let distance1 = Math.pow((x-acc.x),2) + Math.pow((y-acc.y),2);
+            let distance2 = Math.pow((x-cur.x),2) + Math.pow((y-cur.y),2);
+            if(distance1 > distance2){
+              acc = cur;
+            }
+            return acc;
+          })
+      },],
+      relativePoints: [
+        { x: 0.5  , y: 1.2   }    // and to the bottom-mid
+      ],
+      endOnly: true,
+    },
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    restrict: {
+      restriction: "parent",
+      endOnly: true,
+      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+    },
+    // enable autoScroll
+    autoScroll: true,
+
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: (event) =>{
+    }
+  });
+
+  interact('.rubySea')
+  .draggable({
+    snap: {
+      targets: [
+        function (x, y) {
+          return locations.rubySea.reduce((acc, cur) =>{
+            let distance1 = Math.pow((x-acc.x),2) + Math.pow((y-acc.y),2);
+            let distance2 = Math.pow((x-cur.x),2) + Math.pow((y-cur.y),2);
+            if(distance1 > distance2){
+              acc = cur;
+            }
+            return acc;
+          })
+      },],
+      relativePoints: [
+        { x: 0.5  , y: 1.2   }    // and to the bottom-mid
+      ],
+      endOnly: true,
+    },
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    restrict: {
+      restriction: "parent",
+      endOnly: true,
+      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+    },
+    // enable autoScroll
+    autoScroll: true,
+
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: (event) =>{
+    }
+  });
+
+  interact('.azim')
+  .draggable({
+    snap: {
+      targets: [
+        function (x, y) {
+          return locations.azim.reduce((acc, cur) =>{
             let distance1 = Math.pow((x-acc.x),2) + Math.pow((y-acc.y),2);
             let distance2 = Math.pow((x-cur.x),2) + Math.pow((y-cur.y),2);
             if(distance1 > distance2){
